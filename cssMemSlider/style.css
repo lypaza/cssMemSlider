@@ -1,0 +1,203 @@
+body {
+    position: absolute;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+}
+input {
+    display: none;
+}
+.window{
+    position: relative;
+    width: 900px;
+    margin: 0px auto;
+    margin-top: 30px;
+    height: 830px;
+    background-color: #A6DAF7;
+    border-radius: 7%;
+    
+}
+img {
+    width: 800px;
+    height: 700px;
+    background-color: azure;
+    border-radius: 3%;
+}
+.window_slider {
+    position: absolute;
+    width: 800px;
+    height: 700px;
+    margin-left: 50px;
+    margin-top: 50px;
+    border-radius: 3%;
+    overflow: hidden;
+}
+.slider {
+    position: absolute;
+    width: 3200px;
+    height: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    transition: 500ms;
+}
+.text_window {
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    margin-left: 50px;
+    margin-top: 750px;
+    overflow: hidden;
+}
+.text_slider {
+    position: absolute;
+    width: 600px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    transition: 500ms;
+}
+.text_slider > div {
+    width: 150px;
+    height: 30px;
+}
+
+h3 {
+    width: 150px;
+    height: 30px;
+    margin: 0%;
+    font-size: 18px;
+}
+.check_slider {
+    position: absolute;
+    width: 140px;
+    height: 30px;
+    margin-top: 750px;
+    margin-left: 710px;
+    display: flex;
+    flex-direction: row;
+}
+.check_slider > label {
+    width: 35px;
+    height: 30px;
+    transition: 500ms;
+}
+.check_slider > label:hover span {
+    cursor: pointer;
+    background-color: grey;
+}
+span {
+    position: absolute;
+    margin-left: 12px;
+    margin-top: 8px;
+    width: 10px;
+    height: 10px;
+    border: 1.5px solid black;
+    border-radius: 100%;
+    transition: 500ms;
+}
+#box1:checked ~ .window_slider > .slider {
+    left: 0px;
+}
+#box2:checked ~ .window_slider > .slider {
+    left: -800px;
+}
+#box3:checked ~ .window_slider > .slider {
+    left: -1600px;
+}
+#box4:checked ~ .window_slider > .slider {
+    left: -2400px;
+}
+
+#box1:checked ~ .text_window > .text_slider {
+    left: 0px;
+}
+#box2:checked ~ .text_window > .text_slider {
+    left: -150px;
+}
+#box3:checked ~ .text_window > .text_slider {
+    left: -300px;
+}
+#box4:checked ~ .text_window > .text_slider {
+    left: -450px;
+}
+
+#box1:checked ~ .check_slider > .checkbox1 > span {
+    background-color: rgb(0, 0, 0, 0.7);
+}
+#box2:checked ~ .check_slider > .checkbox2 > span {
+    background-color: rgb(0, 0, 0, 0.7);
+}
+#box3:checked ~ .check_slider > .checkbox3 > span {
+    background-color: rgb(0, 0, 0, 0.7);
+}
+#box4:checked ~ .check_slider > .checkbox4 > span {
+    background-color: rgb(0, 0, 0, 0.7);
+}
+
+@media (max-width: 767px) {
+    body {
+        background-color: gray;
+    }
+    .window{
+        position: relative;
+        width: 680px;
+        height: 700px;
+        margin: 0px auto;
+        margin-top: 30px;      
+        background-color: #A6DAF7;
+        
+    }
+    img {
+        width: 600px;
+        height: 460px;
+    }
+    .window_slider {
+        position: absolute;
+        width: 600px;
+        height: 460px;
+        margin-left: 40px;
+        margin-top: 50px;
+        overflow: hidden;
+    }
+    .slider {
+        position: absolute;
+        width: 2400px;
+        height: 460px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        transition: 500ms;
+    }
+    .text_window {
+        position: absolute;
+        width: 150px;
+        height: 30px;
+        margin-left: 40px;
+        margin-top: 565px;
+        overflow: hidden;
+    }
+    .check_slider {
+        position: absolute;
+        width: 140px;
+        height: 30px;
+        margin-top: 525px;
+        margin-left: 270px;
+        display: flex;
+        flex-direction: row;
+    }
+    #box1:checked ~ .window_slider > .slider {
+        left: 0px;
+    }
+    #box2:checked ~ .window_slider > .slider {
+        left: -600px;
+    }
+    #box3:checked ~ .window_slider > .slider {
+        left: -1200px;
+    }
+    #box4:checked ~ .window_slider > .slider {
+        left: -1800px;
+    }
+}
